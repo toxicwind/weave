@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# weave (barn shell) — entity-level semantic merge for Git (Ataraxy-Labs). bin/run.
+#
+# Primary operation: `cargo build --release` the semantic-merge engine, then drive
+# the CLI (`bin/weave.js`) / MCP server (`bin/weave-mcp.js`). This rig surfaces
+# the workspace without forcing a full compile: it validates the Cargo workspace
+# and prints the build/CLI entry points.
+#
+# Usage:
+#   bin/run            structural boot (cargo metadata, no compile)
+#   bin/run build      cargo build --release (the primary op)
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+cmd="$(command -v cargo 2>/dev/null || true)"
+CARGO=""
+for c in /home/toxic/.cargo/bin/cargo "$cmd" /usr/local/bin/cargo /usr/bin/cargo; do
+  [ -n "$c" ] && [ -x "$c" ] && { CARGO="$c"; break; }
+done
+[ -n "${CARGO:-}" ] || { echo "FAIL: cargo not found"; exit 1; }
+
+case "${1:-boot}" in
+  build)
+    echo "== weave run: build release =="
+    exec "$CARGO" build --release --workspace
+    ;;
+  boot|*)
+    echo "== weave run: structural boot =="
+    "$CARGO" metadata --no-deps --format-version 1 >/dev/null 2>&1 \
+      || { echo "FAIL: cargo workspace does not parse"; exit 1; }
+    echo "OK: cargo workspace parses"
+    echo "use: bin/run build   -> cargo build --release --workspace (semantic merge engine)"
+    echo "cli: bin/weave.js    |  mcp server: bin/weave-mcp.js"
+    ;;
+esac
