@@ -1,0 +1,86 @@
+{
+  "product": "weave",
+  "path": "/home/toxic/pens/barn/products/weave",
+  "files": 149,
+  "detected_at": "2026-10-30T06:10:51.781912Z",
+  "env_vars": {
+    "WEAVE_RELEASE_BASE_URL": [
+      "scripts/package-meta.mjs"
+    ],
+    "WEAVE_SKIP_DOWNLOAD": [
+      "scripts/postinstall.mjs"
+    ],
+    "actualHash": [
+      "scripts/verify-checksum.mjs"
+    ],
+    "arch": [
+      "scripts/package-meta.mjs"
+    ],
+    "archiveName": [
+      "scripts/verify-checksum.mjs"
+    ],
+    "artifact": [
+      "scripts/package-meta.mjs"
+    ],
+    "artifactPrefix": [
+      "scripts/package-meta.mjs"
+    ],
+    "baseName": [
+      "scripts/package-meta.mjs"
+    ],
+    "baseUrl": [
+      "scripts/package-meta.mjs"
+    ],
+    "category": [
+      "crates/weave-core/tests/integration.rs"
+    ],
+    "commands": [
+      "crates/weave-core/tests/integration.rs"
+    ],
+    "data": [
+      "crates/weave-cli/src/commands/bench.rs"
+    ],
+    "expectedHash": [
+      "scripts/verify-checksum.mjs"
+    ],
+    "ext": [
+      "scripts/package-meta.mjs"
+    ],
+    "iter": [
+      "crates/weave-cli/tests/land_onto.rs"
+    ],
+    "manifestPath": [
+      "scripts/package-meta.mjs"
+    ],
+    "name": [
+      "crates/weave-core/src/region.rs",
+      "crates/weave-core/tests/integration.rs",
+      "scripts/postinstall.mjs"
+    ],
+    "outputDirectory": [
+      "scripts/postinstall.mjs"
+    ],
+    "platform": [
+      "scripts/package-meta.mjs"
+    ],
+    "prompt": [
+      "crates/weave-core/tests/integration.rs"
+    ],
+    "releaseBaseUrl": [
+      "scripts/verify-checksum.mjs"
+    ],
+    "stderr": [
+      "scripts/postinstall.mjs"
+    ],
+    "target": [
+      "scripts/package-meta.mjs"
+    ],
+    "version": [
+      "scripts/package-meta.mjs",
+      "scripts/postinstall.mjs"
+    ],
+    "zipPath": [
+      "scripts/postinstall.mjs"
+    ]
+  }
+}
