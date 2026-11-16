@@ -8,7 +8,7 @@
 
 pub mod gitscan;
 pub mod land;
-pub mod mergestate;
+pub mod mergpens;
 pub mod onto;
 pub(crate) mod parsers;
 pub mod patch;

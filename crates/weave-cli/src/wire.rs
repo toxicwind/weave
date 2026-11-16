@@ -82,7 +82,7 @@ impl Sides {
 /// because the exhaustive match belongs next to the enum. The prose is owned
 /// here, because it is schema-side and audience-dependent.
 ///
-/// Every line below is *mechanical*: it restates the three-way fact weave
+/// Every line below is *mechanical*: it rpenss the three-way fact weave
 /// already established and names the step that follows from it, and it stops
 /// there. None of them chooses a side, guesses intent, or recommends one
 /// resolution over another — that is the same discipline the marker's

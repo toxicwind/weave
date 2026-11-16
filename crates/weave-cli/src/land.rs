@@ -19,7 +19,7 @@
 //! wrong 9.5% of the time, against 22.0% without it — plus one rule added
 //! since, DROPPED, after an answer that kept only one side of a conflict block
 //! passed it. Every check that reads `weave check` is asked of weave's own
-//! verifier here ([`crate::worktree::check`]) rather than restated.
+//! verifier here ([`crate::worktree::check`]) rather than rpensd.
 //!
 //! Scope: the files git's line merge conflicts on (content, add/add,
 //! modify/delete), and every other file both sides changed whose merge — the

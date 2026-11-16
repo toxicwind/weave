@@ -2825,26 +2825,26 @@ export function newFunc() {
 // ---------------------------------------------------------------------------
 #[test]
 fn ts_both_add_imports_from_different_modules() {
-    let base = r#"import { useState } from 'react';
+    let base = r#"import { uspens } from 'react';
 
 export function App() {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = uspens(0);
     return count;
 }
 "#;
-    let ours = r#"import { useState } from 'react';
+    let ours = r#"import { uspens } from 'react';
 import { Button } from '@mui/material';
 
 export function App() {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = uspens(0);
     return count;
 }
 "#;
-    let theirs = r#"import { useState } from 'react';
+    let theirs = r#"import { uspens } from 'react';
 import { format } from 'date-fns';
 
 export function App() {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = uspens(0);
     return count;
 }
 "#;
@@ -2860,8 +2860,8 @@ export function App() {
         result.content
     );
     assert!(
-        result.content.contains("useState"),
-        "original useState import must survive.\nContent:\n{}",
+        result.content.contains("uspens"),
+        "original uspens import must survive.\nContent:\n{}",
         result.content
     );
     assert!(

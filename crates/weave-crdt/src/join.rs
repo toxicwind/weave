@@ -246,7 +246,7 @@ impl EntityValue {
     ///
     /// The join owns it, because the join is what decides it. `ops.rs` and
     /// `content.rs` each used to spell the same two-armed match out for
-    /// themselves, and `merge.rs` carried a third spelling in a `MergeState`
+    /// themselves, and `merge.rs` carried a third spelling in a `Mergpens`
     /// enum nothing constructed.
     pub fn merge_state(&self) -> &'static str {
         if self.is_conflict() {

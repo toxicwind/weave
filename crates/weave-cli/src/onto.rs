@@ -43,7 +43,7 @@ use weave_core::host::Host;
 
 use crate::gitscan;
 use crate::land::{self, Present, Resolver, Status};
-use crate::mergestate;
+use crate::mergpens;
 use crate::preserve;
 use crate::semcheck;
 
@@ -141,7 +141,7 @@ pub fn land_onto(dir: &Path, opts: &Options, host: &Host, out: &mut dyn Write) -
 
     // An index.lock nobody holds is removed (and said); one that is held,
     // or whose holder cannot be told, refuses: land never works around it.
-    if let Some(why) = mergestate::clear_stale_lock(&gd, out)? {
+    if let Some(why) = mergpens::clear_stale_lock(&gd, out)? {
         writeln!(
             out,
             "land: REFUSED. {why}. Nothing was published. Wait for that process to finish, then \
@@ -158,7 +158,7 @@ pub fn land_onto(dir: &Path, opts: &Options, host: &Host, out: &mut dyn Write) -
             return Ok(Outcome::Refused(why));
         }
     } else {
-        mergestate::clear_record(&gd);
+        mergpens::clear_record(&gd);
     }
 
     if !git(dir, &["status", "--porcelain", "--untracked-files=no"])?.is_empty() {
@@ -467,7 +467,7 @@ pub fn conflict_regions(dir: &Path, files: &[String]) -> Vec<String> {
 /// resolution). `true`: go on (committed, or aborted cleanly).
 pub fn check_resolution(dir: &Path, opts: &Options, host: &Host, out: &mut dyn Write) -> R<bool> {
     let gd = PathBuf::from(git(dir, &["rev-parse", "--absolute-git-dir"])?);
-    if let Some(why) = mergestate::clear_stale_lock(&gd, out)? {
+    if let Some(why) = mergpens::clear_stale_lock(&gd, out)? {
         writeln!(
             out,
             "land: REFUSED. {why}. Nothing was published. Wait for that process to finish, then \
@@ -531,7 +531,7 @@ pub fn start_merge(
     out: &mut dyn Write,
 ) -> R<Result<(), &'static str>> {
     let short = &tip[..tip.len().min(12)];
-    if let Some(why) = mergestate::clear_stale_lock(gd, out)? {
+    if let Some(why) = mergpens::clear_stale_lock(gd, out)? {
         writeln!(
             out,
             "land: REFUSED. {why}. Nothing was published. Wait for that process to finish, then \
@@ -540,7 +540,7 @@ pub fn start_merge(
         return Ok(Err("index.lock held"));
     }
     let pre = rev(dir, "HEAD")?;
-    mergestate::write_record(gd, "in-flight", &pre, tip)?;
+    mergpens::write_record(gd, "in-flight", &pre, tip)?;
     let msg = format!("Merge {target} ({short}) into the branch");
     let (ok, mout, merr) = git_run(
         dir,
@@ -556,7 +556,7 @@ pub fn start_merge(
     // git merge exits 1 for a merge with conflicts; anything else that is not
     // a success — or any word that git could not write — is not a merge.
     let written =
-        started && !mergestate::merge_not_written(&mout, &merr) && (ok || !conflicted.is_empty());
+        started && !mergpens::merge_not_written(&mout, &merr) && (ok || !conflicted.is_empty());
     if written {
         return Ok(Ok(()));
     }
@@ -571,7 +571,7 @@ pub fn start_merge(
         let back = rev(dir, "HEAD")? == pre
             && git(dir, &["status", "--porcelain", "--untracked-files=no"])?.is_empty();
         if back {
-            mergestate::clear_record(gd);
+            mergpens::clear_record(gd);
         }
         back
     };
@@ -608,7 +608,7 @@ fn abort_own_merge(dir: &Path, gd: &Path, pre: &str, out: &mut dyn Write) -> R<b
             return Ok(false);
         }
         // Most likely the lock again: clear it if nobody holds it, else stop.
-        if let Some(why) = mergestate::clear_stale_lock(gd, out)? {
+        if let Some(why) = mergpens::clear_stale_lock(gd, out)? {
             writeln!(out, "land: could not abort land's own merge: {why}.")?;
             return Ok(false);
         }
@@ -617,7 +617,7 @@ fn abort_own_merge(dir: &Path, gd: &Path, pre: &str, out: &mut dyn Write) -> R<b
         && !gd.join("MERGE_HEAD").exists()
         && git(dir, &["status", "--porcelain", "--untracked-files=no"])?.is_empty();
     if back {
-        mergestate::clear_record(gd);
+        mergpens::clear_record(gd);
     } else {
         writeln!(
             out,
@@ -641,7 +641,7 @@ fn resume_merge_in_progress(
 ) -> R<Option<&'static str>> {
     let theirs = rev(dir, "MERGE_HEAD")?;
     let head = rev(dir, "HEAD")?;
-    match mergestate::read_record(gd) {
+    match mergpens::read_record(gd) {
         Some(r) if r.state == "in-flight" && r.pre == head && r.tip == theirs => {
             writeln!(
                 out,
@@ -737,7 +737,7 @@ fn gate_merge_in_progress(
             indent(&names.join("\n"))
         )?;
         if own {
-            mergestate::write_record(&gd, "refused", &pre, theirs)?;
+            mergpens::write_record(&gd, "refused", &pre, theirs)?;
         }
         return Ok(Gated::Refused(names.into_iter().collect()));
     }
@@ -866,12 +866,12 @@ fn gate_merge_in_progress(
             &committed[..committed.len().min(12)],
             &tree[..tree.len().min(12)]
         )?;
-        mergestate::clear_record(&gd);
+        mergpens::clear_record(&gd);
         return Ok(Gated::Refused(Vec::new()));
     }
     Ledger(gd.join("weave-land-verified")).add(&head)?;
     Ledger(gd.join("weave-land-preserved")).add(&head)?;
-    mergestate::clear_record(&gd);
+    mergpens::clear_record(&gd);
     writeln!(
         out,
         "land: the merge passed weave's gate; committed {}.",

@@ -951,7 +951,7 @@ fn joint_insertion_repeated(
 /// A new test that shares three lines of boilerplate with an old one also
 /// writes its own name and its own assertions; a block pasted again writes
 /// nothing of its own.
-pub(crate) fn block_restated(smaller: &str, larger: &str) -> Option<String> {
+pub(crate) fn block_rpensd(smaller: &str, larger: &str) -> Option<String> {
     let key = |l: &str| l.trim().trim_end_matches(',').trim_end().to_string();
     let sig = |lines: &mut dyn Iterator<Item = &str>| -> Vec<String> {
         lines.map(key).filter(|l| significant(l)).collect()

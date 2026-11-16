@@ -2,7 +2,7 @@
 //! elements two sides inserted into one collection — a map, a switch, a const
 //! block, a test table, a run of named declarations — checked from the four
 //! parse trees alone. Nothing here comes from weave's merge: the recogniser,
-//! the keys and the policy are restated, and the check reads `M` rather than
+//! the keys and the policy are rpensd, and the check reads `M` rather than
 //! building it, so a merge that lies about what it did is caught here.
 //!
 //! The four subtrees (base `O`, ours `A`, theirs `B`, merge `M`) are walked in

@@ -501,14 +501,14 @@ fn lander_tree(ctx: &Ctx, candidate: &str) -> R<PathBuf> {
     // removed only when no running process has it open.
     let wgd = PathBuf::from(git(&wt, &["rev-parse", "--absolute-git-dir"])?);
     let mut said = Vec::new();
-    if let Some(why) = crate::mergestate::clear_stale_lock(&wgd, &mut said)? {
+    if let Some(why) = crate::mergpens::clear_stale_lock(&wgd, &mut said)? {
         return Err(format!("the lander's worktree {}: {why}", wt.display()).into());
     }
     if wgd.join("MERGE_HEAD").exists() {
         let _ = git(&wt, &["merge", "--abort"]);
     }
     git(&wt, &["reset", "-q", "--hard"])?;
-    crate::mergestate::clear_record(&wgd);
+    crate::mergpens::clear_record(&wgd);
     git(&wt, &["checkout", "-q", "-f", "--detach", candidate])?;
     git(&wt, &["clean", "-q", "-f", "-d"])?;
     Ok(wt)

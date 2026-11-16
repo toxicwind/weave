@@ -5,7 +5,7 @@
 //! instead. Measured against this on-demand form, that document cost bytes on
 //! every merge without moving the outcome, for two reasons:
 //!
-//! * it restated what the reader already had (three texts one `git show` away),
+//! * it rpensd what the reader already had (three texts one `git show` away),
 //!   and
 //! * it counted **hunks**, not conflicts — "158 hunks, whole-file conflict" for
 //!   three real disagreements is disorienting enough that a reader will

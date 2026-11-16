@@ -488,7 +488,7 @@ summary writes, but it never wrote the `writes` register entry, so it could
 leave `content_hash` naming a write no replica could join. Use
 `update_entity_content`, which takes the content alongside the hash.
 
-**`weave-crdt::MergeState` is no longer exported.** It was part of no supported
+**`weave-crdt::Mergpens` is no longer exported.** It was part of no supported
 flow. `CrdtMergeResult` and `VersionVector` are unchanged.
 
 **`weave-core::reconstruct` is removed.** The v1 reconstruct path it belonged

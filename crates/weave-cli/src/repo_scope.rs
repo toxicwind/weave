@@ -13,7 +13,7 @@
 //!
 //! This module closes that gap by running the *same* def/use evidence rules
 //! ([`weave_core::binding`] — literally the same functions the per-file pass
-//! calls, not a restatement of them) over the whole repo instead of one file.
+//! calls, not a rpensment of them) over the whole repo instead of one file.
 //! It changes nothing about the rule; it only gives it the domain it always
 //! assumed. One owner for that evidence is what makes the two passes'
 //! verdicts comparable at all.

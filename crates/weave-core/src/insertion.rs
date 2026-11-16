@@ -1312,7 +1312,7 @@ mod tests {
     }
 
     #[test]
-    fn certify_refuses_an_answer_that_does_not_parse_or_restates_a_base_key() {
+    fn certify_refuses_an_answer_that_does_not_parse_or_rpenss_a_base_key() {
         let claim = || {
             vec![Claim {
                 rows: 2..3,

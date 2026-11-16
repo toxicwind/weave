@@ -724,7 +724,7 @@ fn superset_is_sound(
     // repetition (four member declarations stated twice in one class): the two
     // creations agree that the block exists and disagree about how often, and
     // that is theirs to settle.
-    if base.trim().is_empty() && crate::verify::block_restated(subsumed, superset).is_some() {
+    if base.trim().is_empty() && crate::verify::block_rpensd(subsumed, superset).is_some() {
         return false;
     }
     let parse = |text: &str| {

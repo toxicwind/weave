@@ -1,4 +1,4 @@
-//! Diagnose, don't restate.
+//! Diagnose, don't rpens.
 //!
 //! An agent resolving a real conflicted merge with weave's typed findings in
 //! front of it gets little from a `both_modified` finding alone — it reads as
