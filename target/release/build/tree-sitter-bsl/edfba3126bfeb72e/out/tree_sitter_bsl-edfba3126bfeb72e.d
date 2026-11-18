@@ -1,0 +1,9 @@
+/home/toxic/pens/barn/products/weave/target/release/build/tree-sitter-bsl/edfba3126bfeb72e/out/tree_sitter_bsl-edfba3126bfeb72e.d: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/../../grammars/bsl/src/node-types.json /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/../../grammars/sdbl/src/node-types.json
+
+/home/toxic/pens/barn/products/weave/target/release/build/tree-sitter-bsl/edfba3126bfeb72e/out/libtree_sitter_bsl-edfba3126bfeb72e.rlib: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/../../grammars/bsl/src/node-types.json /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/../../grammars/sdbl/src/node-types.json
+
+/home/toxic/pens/barn/products/weave/target/release/build/tree-sitter-bsl/edfba3126bfeb72e/out/libtree_sitter_bsl-edfba3126bfeb72e.rmeta: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/../../grammars/bsl/src/node-types.json /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/../../grammars/sdbl/src/node-types.json
+
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/lib.rs:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/../../grammars/bsl/src/node-types.json:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bsl-0.1.7/bindings/rust/../../grammars/sdbl/src/node-types.json:

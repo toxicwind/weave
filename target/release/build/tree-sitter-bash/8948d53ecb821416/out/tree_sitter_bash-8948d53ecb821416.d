@@ -1,0 +1,9 @@
+/home/toxic/pens/barn/weave/target/release/build/tree-sitter-bash/8948d53ecb821416/out/tree_sitter_bash-8948d53ecb821416.d: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/../../src/node-types.json /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/../../queries/highlights.scm
+
+/home/toxic/pens/barn/weave/target/release/build/tree-sitter-bash/8948d53ecb821416/out/libtree_sitter_bash-8948d53ecb821416.rlib: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/../../src/node-types.json /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/../../queries/highlights.scm
+
+/home/toxic/pens/barn/weave/target/release/build/tree-sitter-bash/8948d53ecb821416/out/libtree_sitter_bash-8948d53ecb821416.rmeta: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/../../src/node-types.json /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/../../queries/highlights.scm
+
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/lib.rs:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/../../src/node-types.json:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tree-sitter-bash-0.23.3/bindings/rust/../../queries/highlights.scm:

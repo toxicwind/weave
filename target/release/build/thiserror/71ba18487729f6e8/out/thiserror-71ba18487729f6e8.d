@@ -1,0 +1,15 @@
+/home/toxic/pens/barn/weave/target/release/build/thiserror/71ba18487729f6e8/out/thiserror-71ba18487729f6e8.d: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/aserror.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/display.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/provide.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/var.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/private.rs /home/toxic/pens/barn/weave/target/release/build/thiserror/fa60ff0390c39592/out/private.rs
+
+/home/toxic/pens/barn/weave/target/release/build/thiserror/71ba18487729f6e8/out/libthiserror-71ba18487729f6e8.rlib: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/aserror.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/display.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/provide.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/var.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/private.rs /home/toxic/pens/barn/weave/target/release/build/thiserror/fa60ff0390c39592/out/private.rs
+
+/home/toxic/pens/barn/weave/target/release/build/thiserror/71ba18487729f6e8/out/libthiserror-71ba18487729f6e8.rmeta: /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/lib.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/aserror.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/display.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/provide.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/var.rs /home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/private.rs /home/toxic/pens/barn/weave/target/release/build/thiserror/fa60ff0390c39592/out/private.rs
+
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/lib.rs:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/aserror.rs:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/display.rs:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/provide.rs:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/var.rs:
+/home/toxic/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.20/src/private.rs:
+/home/toxic/pens/barn/weave/target/release/build/thiserror/fa60ff0390c39592/out/private.rs:
+
+# env-dep:OUT_DIR=/home/toxic/pens/barn/weave/target/release/build/thiserror/fa60ff0390c39592/out

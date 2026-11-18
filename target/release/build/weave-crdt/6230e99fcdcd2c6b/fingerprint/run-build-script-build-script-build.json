@@ -1,0 +1,1 @@
+{"rustc":16194788426036805152,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[13224933028524978975,"build_script_build",false,4403061717186752383]],"local":[{"Precalculated":"1792966382.510899427s (tests/resolve_entity.rs)"}],"rustflags":["-C","link-arg=-fuse-ld=mold"],"config":0,"compile_kind":0}

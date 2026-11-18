@@ -1,0 +1,1 @@
+{"rustc":2646949812120272686,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[16154544435145561467,"build_script_build",false,10338780585714812778]],"local":[{"Precalculated":"1792966382.505955020s (tests/fixtures/cli_simplify/check_json.out)"}],"rustflags":[],"config":0,"compile_kind":0}
